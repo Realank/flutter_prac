@@ -4,6 +4,7 @@ import 'ImagePage.dart';
 import 'CustomTheme.dart';
 import 'LayoutPage.dart';
 import 'GridViewPage.dart';
+import 'ListPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -24,7 +25,8 @@ class _FeatureListState extends State<FeatureList> {
     '文本': Icons.text_fields,
     '图片': Icons.wallpaper,
     '布局': Icons.widgets,
-    '网格': Icons.grid_on
+    '网格': Icons.grid_on,
+    'List': Icons.list,
   };
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,8 @@ class _FeatureListState extends State<FeatureList> {
       case '网格':
         jumpPage(new GridViewPage());
         break;
+      case 'List':
+        jumpPage(new ListPage());
     }
   }
 

@@ -30,18 +30,20 @@ class GridViewPage extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('GridViewPage'),
       ),
-      body: new Row(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          new Expanded(
-            child: buildGrid(),
-          ),
-          new Expanded(
-            child: buildGrid2(),
-            flex: 2,
-          )
-        ],
+      body: SafeArea(
+        child: new Row(
+//          mainAxisSize: MainAxisSize.min,
+//          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            new Expanded(
+              child: buildGrid(),
+            ),
+            new Expanded(
+              child: buildGrid2(),
+              flex: 2,
+            )
+          ],
+        ),
       ),
     );
   }
