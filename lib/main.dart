@@ -5,6 +5,7 @@ import 'CustomTheme.dart';
 import 'LayoutPage.dart';
 import 'GridViewPage.dart';
 import 'ListPage.dart';
+import 'StackPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -27,6 +28,7 @@ class _FeatureListState extends State<FeatureList> {
     '布局': Icons.widgets,
     '网格': Icons.grid_on,
     'List': Icons.list,
+    'Stack': Icons.star,
   };
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,10 @@ class _FeatureListState extends State<FeatureList> {
         break;
       case 'List':
         jumpPage(new ListPage());
+        break;
+      case 'Stack':
+        jumpPage(new StackPage());
+        break;
     }
   }
 
