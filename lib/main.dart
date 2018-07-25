@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'TextPage.dart';
 import 'ImagePage.dart';
 import 'CustomTheme.dart';
+import 'LayoutPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -18,7 +19,7 @@ class FeatureList extends StatefulWidget {
 }
 
 class _FeatureListState extends State<FeatureList> {
-  var list = ['文本', '图片'];
+  var list = ['文本', '图片', '布局'];
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -45,6 +46,8 @@ class _FeatureListState extends State<FeatureList> {
       case '图片':
         jumpPage(new ImagePage());
         break;
+      case '布局':
+        jumpPage(new LayoutPage());
     }
   }
 

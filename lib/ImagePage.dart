@@ -23,7 +23,7 @@ class ImagePage extends StatelessWidget {
                 ),
                 Colors.green),
             new Image.asset(
-              'images/dubai.JPG',
+              'images/dubai.jpg',
               height: 200.0,
               fit: BoxFit.cover,
             ),
