@@ -3,6 +3,7 @@ import 'TextPage.dart';
 import 'ImagePage.dart';
 import 'CustomTheme.dart';
 import 'LayoutPage.dart';
+import 'GridViewPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -19,7 +20,12 @@ class FeatureList extends StatefulWidget {
 }
 
 class _FeatureListState extends State<FeatureList> {
-  var list = ['文本', '图片', '布局'];
+  var listDict = {
+    '文本': Icons.text_fields,
+    '图片': Icons.wallpaper,
+    '布局': Icons.widgets,
+    '网格': Icons.grid_on
+  };
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -27,9 +33,9 @@ class _FeatureListState extends State<FeatureList> {
         title: new Text('功能列表'),
       ),
       body: new ListView(
-          children: list.map((String name) {
+          children: listDict.keys.map((String name) {
         return new ListTile(
-            leading: new Icon(Icons.school),
+            leading: new Icon(listDict[name]),
             title: new Text(name),
             onTap: () {
               goNext(name);
@@ -48,6 +54,10 @@ class _FeatureListState extends State<FeatureList> {
         break;
       case '布局':
         jumpPage(new LayoutPage());
+        break;
+      case '网格':
+        jumpPage(new GridViewPage());
+        break;
     }
   }
 
