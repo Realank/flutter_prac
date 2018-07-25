@@ -30,6 +30,13 @@
             </list>
           </value>
         </entry>
+        <entry key="cached_network_image">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/cached_network_image-0.4.1+1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="charcode">
           <value>
             <list>
@@ -76,6 +83,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/flutter/packages/flutter/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_cache_manager">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_cache_manager-0.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -212,6 +226,13 @@
             </list>
           </value>
         </entry>
+        <entry key="path_provider">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/path_provider-0.4.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="plugin">
           <value>
             <list>
@@ -237,6 +258,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/quiver-0.29.0+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="shared_preferences">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2/lib" />
             </list>
           </value>
         </entry>
@@ -317,6 +345,13 @@
             </list>
           </value>
         </entry>
+        <entry key="synchronized">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/synchronized-1.5.0+1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="term_glyph">
           <value>
             <list>
@@ -342,6 +377,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/utf-0.9.0+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="uuid">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/uuid-0.5.3/lib" />
             </list>
           </value>
         </entry>
@@ -380,12 +422,14 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/args-1.4.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/async-2.0.7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/boolean_selector-1.0.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/cached_network_image-0.4.1+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/charcode-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/collection-1.14.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/convert-2.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/crypto-2.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/csslib-0.14.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/cupertino_icons-0.1.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/flutter_cache_manager-0.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/front_end-0.1.0-alpha.12/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/glob-1.1.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/html-0.13.3/lib" />
@@ -404,10 +448,12 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/package_config-1.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/package_resolver-1.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/path-1.5.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/path_provider-0.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/plugin-0.2.0+2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pool-1.3.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/pub_semver-1.4.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/quiver-0.29.0+1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shelf-0.7.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shelf_packages_handler-1.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/shelf_static-0.2.7/lib" />
@@ -418,10 +464,12 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/stack_trace-1.9.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/stream_channel-1.6.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/string_scanner-1.0.2/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/synchronized-1.5.0+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/term_glyph-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/test-0.12.37/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/typed_data-1.1.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/utf-0.9.0+4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/uuid-0.5.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.0.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/watcher-0.9.7+7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/web_socket_channel-1.0.7/lib" />

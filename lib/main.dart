@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'TextPage.dart';
 import 'ImagePage.dart';
+import 'CustomTheme.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new FeatureList(),
-      theme: new ThemeData(
-        primaryColor: Colors.green,
-      ),
-    );
+    return new MaterialApp(home: new FeatureList(), theme: customTheme);
   }
 }
 
