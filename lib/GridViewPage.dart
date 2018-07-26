@@ -28,7 +28,7 @@ class GridViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('GridViewPage'),
+        title: new Text('网格'),
       ),
       body: SafeArea(
         child: new Row(

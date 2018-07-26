@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-var customTheme = new ThemeData(
+final customTheme = new ThemeData(
   primaryColor: Colors.blue,
   accentColor: Colors.cyanAccent,
   textTheme: TextTheme(
@@ -68,7 +68,7 @@ var customTheme = new ThemeData(
         debugLabel: 'blackMountainView button',
         fontFamily: 'Roboto',
         inherit: true,
-        color: Colors.black87,
+        color: Color(0xFF1976D2),
         decoration: TextDecoration.none),
   ),
 );

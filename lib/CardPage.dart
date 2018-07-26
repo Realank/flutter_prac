@@ -40,9 +40,9 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('CardPage'),
+        title: new Text('卡片'),
       ),
-      body: createCard(),
+      body: Center(child: createCard()),
     );
   }
 }

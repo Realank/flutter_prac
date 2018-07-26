@@ -7,30 +7,29 @@ import 'GridViewPage.dart';
 import 'ListPage.dart';
 import 'StackPage.dart';
 import 'CardPage.dart';
+import 'StateManage.dart';
+import 'InputPage.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(home: new FeatureList(), theme: customTheme);
+    return new MaterialApp(home: new _Features(), theme: customTheme);
   }
 }
 
-class FeatureList extends StatefulWidget {
-  @override
-  createState() => new _FeatureListState();
-}
-
-class _FeatureListState extends State<FeatureList> {
-  var listDict = {
+class _Features extends StatelessWidget {
+  final listDict = {
     '文本': Icons.text_fields,
     '图片': Icons.wallpaper,
     '布局': Icons.widgets,
     '网格': Icons.grid_on,
-    'List': Icons.list,
+    '列表': Icons.list,
     'Stack': Icons.star,
-    '卡片': Icons.credit_card
+    '卡片': Icons.credit_card,
+    '状态管理': Icons.touch_app,
+    '输入': Icons.input,
   };
   @override
   Widget build(BuildContext context) {
@@ -44,39 +43,45 @@ class _FeatureListState extends State<FeatureList> {
             leading: new Icon(listDict[name]),
             title: new Text(name),
             onTap: () {
-              goNext(name);
+              goNext(name, context);
             });
       }).toList()),
     );
   }
 
-  void goNext(page) {
+  void goNext(page, BuildContext context) {
     switch (page) {
       case '文本':
-        jumpPage(new TextPage());
+        jumpPage(new TextPage(), context);
         break;
       case '图片':
-        jumpPage(new ImagePage());
+        jumpPage(new ImagePage(), context);
         break;
       case '布局':
-        jumpPage(new LayoutPage());
+        jumpPage(new LayoutPage(), context);
         break;
       case '网格':
-        jumpPage(new GridViewPage());
+        jumpPage(new GridViewPage(), context);
         break;
-      case 'List':
-        jumpPage(new ListPage());
+      case '列表':
+        jumpPage(new ListPage(), context);
         break;
       case 'Stack':
-        jumpPage(new StackPage());
+        jumpPage(new StackPage(), context);
         break;
       case '卡片':
-        jumpPage(new CardPage());
+        jumpPage(new CardPage(), context);
+        break;
+      case '状态管理':
+        jumpPage(new StateManage(), context);
+        break;
+      case '输入':
+        jumpPage(new InputPage(), context);
         break;
     }
   }
 
-  void jumpPage(StatelessWidget widget) {
+  void jumpPage(StatelessWidget widget, BuildContext context) {
     Navigator.of(context).push(
           new MaterialPageRoute(builder: (context) => widget),
         );

@@ -127,7 +127,7 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('ListPage'),
+          title: new Text('列表'),
         ),
         body: SafeArea(
           child: Row(

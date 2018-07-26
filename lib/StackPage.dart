@@ -5,7 +5,7 @@ class StackPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('StackPage'),
+        title: new Text('Stack'),
       ),
       body: Center(
         child: new Stack(

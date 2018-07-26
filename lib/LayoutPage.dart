@@ -5,7 +5,7 @@ class LayoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('LayoutPage'),
+        title: new Text('布局'),
       ),
       body: new Content(),
     );

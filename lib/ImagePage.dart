@@ -6,7 +6,7 @@ class ImagePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('ImagePage'),
+          title: new Text('图片'),
         ),
         body: new Column(
           children: <Widget>[
