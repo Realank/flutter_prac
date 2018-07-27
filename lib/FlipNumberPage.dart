@@ -28,13 +28,13 @@ class FlipNumberPage extends StatelessWidget {
                 width: 96.0,
                 height: 128.0,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.blue,
                   borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 ),
                 child: Text(
                   '${digits[index]}',
                   style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 80.0, color: Colors.yellow),
+                      TextStyle(fontWeight: FontWeight.bold, fontSize: 80.0, color: Colors.white),
                 ),
               ),
           itemsCount: digits.length,
@@ -102,7 +102,7 @@ class FlipPanel<T> extends StatefulWidget {
     this.duration = const Duration(milliseconds: 500),
     this.loop = 1,
     this.startIndex = 0,
-    this.spacing = 0.5,
+    this.spacing = 1.0,
     this.direction = FlipDirection.up,
   })  : assert(itemBuilder != null),
         assert(itemsCount != null),
@@ -122,7 +122,7 @@ class FlipPanel<T> extends StatefulWidget {
     @required StreamItemBuilder<T> itemBuilder,
     this.initValue,
     this.duration = const Duration(milliseconds: 500),
-    this.spacing = 0.5,
+    this.spacing = 1.0,
     this.direction = FlipDirection.up,
   })  : assert(itemStream != null),
         indexedItemBuilder = null,
