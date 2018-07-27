@@ -12,6 +12,7 @@ import 'InputPage.dart';
 import 'GesturePage.dart';
 import 'AnimationPage.dart';
 import 'FileIOPage.dart';
+import 'NetworkPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -36,6 +37,7 @@ class _Features extends StatelessWidget {
     '手势': Icons.gesture,
     '动画': Icons.motorcycle,
     '文件读取': Icons.insert_drive_file,
+    '网络': Icons.settings_ethernet,
   };
   @override
   Widget build(BuildContext context) {
@@ -92,6 +94,9 @@ class _Features extends StatelessWidget {
         break;
       case '文件读取':
         jumpPage(new FileIOPage(), context);
+        break;
+      case '网络':
+        jumpPage(new NetworkPage(), context);
         break;
     }
   }

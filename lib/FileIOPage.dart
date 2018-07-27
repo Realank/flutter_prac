@@ -58,7 +58,7 @@ class _FlutterDemoState extends State<FlutterDemo> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(title: new Text('Flutter Demo')),
+      appBar: new AppBar(title: new Text('文件读取')),
       body: new Center(
         child: new Text('Button tapped $_counter time${
           _counter == 1 ? '' : 's'
