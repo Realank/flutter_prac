@@ -13,6 +13,7 @@ import 'GesturePage.dart';
 import 'AnimationPage.dart';
 import 'FileIOPage.dart';
 import 'NetworkPage.dart';
+import 'FlipNumberPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -38,6 +39,7 @@ class _Features extends StatelessWidget {
     '动画': Icons.motorcycle,
     '文件读取': Icons.insert_drive_file,
     '网络': Icons.settings_ethernet,
+    '第三方动画': Icons.flip,
   };
   @override
   Widget build(BuildContext context) {
@@ -97,6 +99,9 @@ class _Features extends StatelessWidget {
         break;
       case '网络':
         jumpPage(new NetworkPage(), context);
+        break;
+      case '第三方动画':
+        jumpPage(new FlipNumberPage(), context);
         break;
     }
   }
