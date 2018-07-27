@@ -11,6 +11,7 @@ import 'StateManage.dart';
 import 'InputPage.dart';
 import 'GesturePage.dart';
 import 'AnimationPage.dart';
+import 'FileIOPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -34,6 +35,7 @@ class _Features extends StatelessWidget {
     '输入': Icons.input,
     '手势': Icons.gesture,
     '动画': Icons.motorcycle,
+    '文件读取': Icons.insert_drive_file,
   };
   @override
   Widget build(BuildContext context) {
@@ -87,6 +89,9 @@ class _Features extends StatelessWidget {
         break;
       case '动画':
         jumpPage(new AnimationPage(), context);
+        break;
+      case '文件读取':
+        jumpPage(new FileIOPage(), context);
         break;
     }
   }
