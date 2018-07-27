@@ -5,7 +5,7 @@ class GesturePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('GesturePage'),
+        title: new Text('手势'),
       ),
       body: new GestureGround(),
     );

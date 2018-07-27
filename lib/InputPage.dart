@@ -28,7 +28,7 @@ class InputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('InputPage'),
+        title: new Text('输入'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

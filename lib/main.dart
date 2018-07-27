@@ -10,6 +10,7 @@ import 'CardPage.dart';
 import 'StateManage.dart';
 import 'InputPage.dart';
 import 'GesturePage.dart';
+import 'AnimationPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -32,6 +33,7 @@ class _Features extends StatelessWidget {
     '状态管理': Icons.touch_app,
     '输入': Icons.input,
     '手势': Icons.gesture,
+    '动画': Icons.motorcycle,
   };
   @override
   Widget build(BuildContext context) {
@@ -82,6 +84,9 @@ class _Features extends StatelessWidget {
         break;
       case '手势':
         jumpPage(new GesturePage(), context);
+        break;
+      case '动画':
+        jumpPage(new AnimationPage(), context);
         break;
     }
   }
