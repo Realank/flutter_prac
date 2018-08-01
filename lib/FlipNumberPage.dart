@@ -19,7 +19,7 @@ class FlipNumberPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('FlipNumberPage'),
+        title: new Text('翻转动画'),
       ),
       body: new Center(
         child: FlipPanel.builder(
@@ -38,6 +38,7 @@ class FlipNumberPage extends StatelessWidget {
                 ),
               ),
           itemsCount: digits.length,
+          direction: FlipDirection.down,
           period: Duration(milliseconds: 1000),
           loop: -1,
         ),

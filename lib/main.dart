@@ -14,6 +14,7 @@ import 'AnimationPage.dart';
 import 'FileIOPage.dart';
 import 'NetworkPage.dart';
 import 'FlipNumberPage.dart';
+import 'TimerPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -40,6 +41,7 @@ class _Features extends StatelessWidget {
     '文件读取': Icons.insert_drive_file,
     '网络': Icons.settings_ethernet,
     '第三方动画': Icons.flip,
+    '定时器': Icons.extension
   };
   @override
   Widget build(BuildContext context) {
@@ -102,6 +104,9 @@ class _Features extends StatelessWidget {
         break;
       case '第三方动画':
         jumpPage(new FlipNumberPage(), context);
+        break;
+      case '定时器':
+        jumpPage(new TimerPage(), context);
         break;
     }
   }
