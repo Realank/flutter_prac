@@ -17,6 +17,7 @@ import 'FlipNumberPage.dart';
 import 'TimerPage.dart';
 import 'AppleStylePage.dart';
 import 'ScrollTabPage.dart';
+import 'AppleScrollPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -45,6 +46,7 @@ class _Features extends StatelessWidget {
     '第三方动画': Icons.flip,
     '定时器': Icons.extension,
     '苹果风格': Icons.phone_iphone,
+    '苹果导航/列表': Icons.navigate_before,
     '滚动TabBar': Icons.inbox,
   };
   @override
@@ -114,6 +116,9 @@ class _Features extends StatelessWidget {
         break;
       case '苹果风格':
         jumpPage(new AppleStylePage(), context);
+        break;
+      case '苹果导航/列表':
+        jumpPage(new AppleScrollPage(), context);
         break;
       case '滚动TabBar':
         jumpPage(new ScrollTabPage(), context);
