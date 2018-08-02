@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2a8570-41e0-4209-ba09-bbb6e0a9fa29" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/ScrollTabPage.dart" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/InputPage.dart" afterPath="$PROJECT_DIR$/lib/InputPage.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -496,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533189366203</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add scroll tab page">
+      <created>1533194795444</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1533194795444</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -591,7 +595,8 @@
     <MESSAGE value="add timer page" />
     <MESSAGE value="add inkwell button" />
     <MESSAGE value="add apple style page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add apple style page" />
+    <MESSAGE value="add scroll tab page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add scroll tab page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
