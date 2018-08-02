@@ -28,7 +28,7 @@ class InputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('输入'),
+        title: new Text('输入&按钮'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +50,9 @@ class InputPage extends StatelessWidget {
           new Text('Switch'),
           new Divider(),
           new Text('TextField'),
-          new TextFieldExample()
+          new TextFieldExample(),
+          new Divider(),
+          new InkWellButtonExample(),
         ],
       ),
       floatingActionButton: new FloatingActionButton(
@@ -111,6 +113,29 @@ class _TextFieldExampleState extends State<TextFieldExample> {
           child: new Text('DONE'),
         ),
       ],
+    );
+  }
+}
+
+class InkWellButtonExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Ink(
+      color: Colors.lightGreen,
+      child: new InkWell(
+        highlightColor: Colors.green,
+        splashColor: Colors.red,
+        onTap: () {
+//          _buttonAction(context, '水波纹按钮');
+        },
+        child: new Ink(
+//          color: Colors.lightBlue,
+          padding: new EdgeInsets.all(12.0),
+          child: new Text(
+            '水波纹按钮',
+          ),
+        ),
+      ),
     );
   }
 }

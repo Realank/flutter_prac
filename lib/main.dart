@@ -35,7 +35,7 @@ class _Features extends StatelessWidget {
     'Stack': Icons.star,
     '卡片': Icons.credit_card,
     '状态管理': Icons.touch_app,
-    '输入': Icons.input,
+    '输入&按钮': Icons.input,
     '手势': Icons.gesture,
     '动画': Icons.motorcycle,
     '文件读取': Icons.insert_drive_file,
@@ -87,7 +87,7 @@ class _Features extends StatelessWidget {
       case '状态管理':
         jumpPage(new StateManage(), context);
         break;
-      case '输入':
+      case '输入&按钮':
         jumpPage(new InputPage(), context);
         break;
       case '手势':
