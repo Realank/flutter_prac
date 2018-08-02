@@ -24,9 +24,11 @@ void _buttonAction(BuildContext context, String content) {
 }
 
 class InputPage extends StatelessWidget {
+  static final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      key: _scaffoldKey,
       appBar: new AppBar(
         title: new Text('输入&按钮'),
       ),
@@ -59,7 +61,8 @@ class InputPage extends StatelessWidget {
         foregroundColor: Colors.white,
         backgroundColor: Theme.of(context).primaryColor,
         onPressed: () {
-          _buttonAction(context, 'Floating Action Button');
+//          _buttonAction(context, 'Floating Action Button');
+          _scaffoldKey.currentState.showSnackBar(const SnackBar(content: const Text("snack bar")));
         },
         tooltip: 'Increment',
         child: new Icon(Icons.add),
