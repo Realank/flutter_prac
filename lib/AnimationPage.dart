@@ -9,7 +9,12 @@ class AnimationPage extends StatelessWidget {
         title: new Text('动画'),
       ),
       body: new Column(
-        children: <Widget>[new LogoApp(), new LogoApp2(), new LogoApp3(), new LogoApp4()],
+        children: <Widget>[
+          Container(height: 130.0, child: LogoApp()),
+          Container(height: 130.0, child: LogoApp2()),
+          Container(height: 130.0, child: LogoApp3()),
+          Container(height: 130.0, child: LogoApp4())
+        ],
       ),
     );
   }
@@ -196,7 +201,7 @@ class _LogoAppState4 extends State<LogoApp4> with TickerProviderStateMixin {
   initState() {
     super.initState();
     controller = new AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
-    animation = new CurvedAnimation(parent: controller, curve: Curves.easeIn);
+    animation = new CurvedAnimation(parent: controller, curve: Curves.bounceIn);
 
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
