@@ -48,7 +48,7 @@ class AppleStylePage extends StatelessWidget {
 //                print('changed $value');
 //              },
               onChangeEnd: (double value) {
-                print('end $value');
+                print('slider end $value');
               },
             ),
             new SwitchWidget(
@@ -85,15 +85,17 @@ class SliderWidget extends StatefulWidget {
   final ValueChanged<double> onChangeEnd;
   SliderWidget({@required this.initialValue, this.onChanged, this.onChangeEnd});
   @override
-  _SliderWidgetState createState() =>
-      new _SliderWidgetState(value: initialValue, onChanged: onChanged, onChangeEnd: onChangeEnd);
+  _SliderWidgetState createState() => new _SliderWidgetState();
 }
 
 class _SliderWidgetState extends State<SliderWidget> {
-  double value = 0.5;
-  final ValueChanged<double> onChanged;
-  final ValueChanged<double> onChangeEnd;
-  _SliderWidgetState({@required this.value, this.onChanged, this.onChangeEnd});
+  double value;
+  @override
+  void initState() {
+    value = widget.initialValue;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new CupertinoSlider(
@@ -104,13 +106,13 @@ class _SliderWidgetState extends State<SliderWidget> {
           setState(() {
             value = newValue;
           });
-          if (onChanged != null) {
-            onChanged(newValue);
+          if (widget.onChanged != null) {
+            widget.onChanged(newValue);
           }
         },
         onChangeEnd: (double newValue) {
-          if (onChangeEnd != null) {
-            onChangeEnd(newValue);
+          if (widget.onChangeEnd != null) {
+            widget.onChangeEnd(newValue);
           }
         });
   }
@@ -121,14 +123,17 @@ class SwitchWidget extends StatefulWidget {
   final ValueChanged<bool> onChanged;
   SwitchWidget({@required this.initialValue, this.onChanged});
   @override
-  _SwitchWidgetState createState() =>
-      new _SwitchWidgetState(value: initialValue, onChanged: onChanged);
+  _SwitchWidgetState createState() => new _SwitchWidgetState();
 }
 
 class _SwitchWidgetState extends State<SwitchWidget> {
   bool value = true;
-  final ValueChanged<bool> onChanged;
-  _SwitchWidgetState({@required this.value, this.onChanged});
+  @override
+  void initState() {
+    value = widget.initialValue;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new CupertinoSwitch(
@@ -137,8 +142,8 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           setState(() {
             value = newValue;
           });
-          if (onChanged != null) {
-            onChanged(newValue);
+          if (widget.onChanged != null) {
+            widget.onChanged(newValue);
           }
         });
   }
