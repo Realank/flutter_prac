@@ -10,15 +10,31 @@ class DrawerPage extends StatelessWidget {
           const BackButton(),
         ],
       ),
-      body: new Text('DrawerPage'),
+      body: Column(
+        children: <Widget>[Text('DrawerPage'), Expanded(child: Text('hello'))],
+      ),
       drawer: new Drawer(
         child: SafeArea(
           child: ListView(
             children: <Widget>[
               new Text("this is a drawer"),
-              Divider(),
+              Divider(
+                height: 0.5,
+              ),
               new Text("line1"),
-              Divider(),
+              Divider(
+                height: 0.5,
+              ),
+              new Container(
+                height: 44.0,
+                color: Colors.blue,
+                child: Center(
+                    child: FlatButton(
+                        onPressed: () {
+                          Navigator.maybePop(context);
+                        },
+                        child: Text('back'))),
+              ),
             ],
           ),
         ),
