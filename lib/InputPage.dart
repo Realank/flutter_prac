@@ -55,6 +55,31 @@ class InputPage extends StatelessWidget {
           new TextFieldExample(),
           new Divider(),
           new InkWellButtonExample(),
+          new Divider(),
+          new PopupMenuButton<String>(
+            onSelected: (String result) {
+              print('select $result');
+            },
+            icon: const Icon(Icons.more_vert),
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                  const PopupMenuItem<String>(
+                    value: 'a',
+                    child: const Text('Working a lot harder'),
+                  ),
+                  const PopupMenuItem<String>(
+                    value: 'b',
+                    child: const Text('Being a lot smarter'),
+                  ),
+                  const PopupMenuItem<String>(
+                    value: 'c',
+                    child: const Text('Being a self-starter'),
+                  ),
+                  const PopupMenuItem<String>(
+                    value: 'd',
+                    child: const Text('Placed in charge of trading charter'),
+                  ),
+                ],
+          )
         ],
       ),
       floatingActionButton: new FloatingActionButton(
@@ -93,6 +118,20 @@ class TextFieldExample extends StatefulWidget {
 /// State for [TextFieldExample] widgets.
 class _TextFieldExampleState extends State<TextFieldExample> {
   final TextEditingController _controller = new TextEditingController();
+  @override
+  void initState() {
+    _controller.addListener(() {
+      print('input ${_controller.text}');
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    print('dispose text field');
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,6 +143,7 @@ class _TextFieldExampleState extends State<TextFieldExample> {
         new Expanded(
           child: new TextField(
             controller: _controller,
+            maxLength: 30,
             decoration: new InputDecoration(
               hintText: 'Type something',
             ),
