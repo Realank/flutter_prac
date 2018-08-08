@@ -94,6 +94,19 @@ class ScrollTabState extends State<ScrollTabWidget> with SingleTickerProviderSta
               ),
             );
           }).toList()),
+      bottomNavigationBar: new Container(
+        color: Theme.of(context).primaryColor,
+        child: SafeArea(
+          child: new TabBar(
+            controller: _controller,
+            isScrollable: true,
+            indicator: getIndicator2(),
+            tabs: _allPages.map((_Page page) {
+              return new Tab(text: page.text, icon: new Icon(page.icon));
+            }).toList(),
+          ),
+        ),
+      ),
     );
   }
 }

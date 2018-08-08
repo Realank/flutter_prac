@@ -18,6 +18,7 @@ import 'TimerPage.dart';
 import 'AppleStylePage.dart';
 import 'ScrollTabPage.dart';
 import 'AppleScrollPage.dart';
+import 'DrawerPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -48,6 +49,7 @@ class _Features extends StatelessWidget {
     '苹果风格': Icons.phone_iphone,
     '苹果导航/列表': Icons.navigate_before,
     '滚动TabBar': Icons.inbox,
+    '侧滑抽屉': Icons.keyboard_tab,
   };
   @override
   Widget build(BuildContext context) {
@@ -122,6 +124,10 @@ class _Features extends StatelessWidget {
         break;
       case '滚动TabBar':
         jumpPage(new ScrollTabPage(), context);
+        break;
+      case '侧滑抽屉':
+        jumpPage(new DrawerPage(), context);
+        break;
     }
   }
 
