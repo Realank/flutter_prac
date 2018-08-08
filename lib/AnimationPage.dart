@@ -36,6 +36,7 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
       ..addListener(() {
         setState(() {
           // the state that has changed here is the animation object’s value
+          //这会造成UI重新渲染，此动画实现方式不推荐
         });
       });
     controller.forward();

@@ -7,8 +7,17 @@ class DrawerPage extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('DrawerPage'),
         actions: <Widget>[
-          const BackButton(),
+          new Builder(builder: (context) {
+            return new IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          }),
         ],
+        leading: const BackButton(),
       ),
       body: Column(
         children: <Widget>[Text('DrawerPage'), Expanded(child: Text('hello'))],
