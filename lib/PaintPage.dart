@@ -14,9 +14,12 @@ class PaintPage extends StatelessWidget {
         title: Text('绘图'),
       ),
       body: Center(
-        child: StaticRatingBar(
-          rate: 3.6,
-          size: 20.0,
+        child: Container(
+          color: Colors.blue,
+          child: StaticRatingBar(
+            rate: 3.6,
+            size: 60.0,
+          ),
         ),
       ),
     );
@@ -54,7 +57,7 @@ class StaticRatingBar extends StatelessWidget {
         height: size,
         child: new CustomPaint(
           painter: new _PainterStars(
-              size: this.size / 2, color: colorLight, style: PaintingStyle.fill, strokeWidth: 0.0),
+              size: this.size, color: colorLight, style: PaintingStyle.fill, strokeWidth: 0.0),
         ));
   }
 
@@ -64,7 +67,7 @@ class StaticRatingBar extends StatelessWidget {
         height: size,
         child: new CustomPaint(
           painter: new _PainterStars(
-              size: this.size / 2, color: colorDark, style: PaintingStyle.fill, strokeWidth: 0.0),
+              size: this.size, color: colorDark, style: PaintingStyle.fill, strokeWidth: 0.0),
         ));
   }
 
@@ -111,11 +114,11 @@ class _PainterStars extends CustomPainter {
     return (Math.pi * degree / 180);
   }
 
-  Path createStarPath(double radius, Path path) {
+  Path createStarPath(double width, Path path) {
+    double radius = width / 2;
     double radian = degree2Radian(36); // 36为五角星的角度
     double radiusIn =
-        (radius * Math.sin(radian / 2) / Math.cos(radian)) * 1.1; // 中间五边形的半径,太正不是很好看，扩大一点点
-
+        (radius * Math.sin(radian / 2) / Math.cos(radian)) * 1.0; // 中间五边形的半径,太正不是很好看，扩大一点点
     path.moveTo((radius * Math.cos(radian / 2)), 0.0); // 此点为多边形的起点
     path.lineTo((radius * Math.cos(radian / 2) + radiusIn * Math.sin(radian)),
         (radius - radius * Math.sin(radian / 2)));
@@ -139,29 +142,23 @@ class _PainterStars extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = new Paint();
+    Paint paint = Paint();
     //   paint.color = Colors.redAccent;
     paint.strokeWidth = strokeWidth;
     paint.color = color;
     paint.style = style;
 
-    Path path = new Path();
+    Path path = Path().shift(Offset(strokeWidth, strokeWidth));
 
-    double offset = strokeWidth > 0 ? strokeWidth + 2 : 0.0;
-
-    path = createStarPath(this.size - offset, path);
-    path = path.shift(new Offset(this.size * 2, 0.0));
-    path = createStarPath(this.size - offset, path);
-    path = path.shift(new Offset(this.size * 2, 0.0));
-    path = createStarPath(this.size - offset, path);
-    path = path.shift(new Offset(this.size * 2, 0.0));
-    path = createStarPath(this.size - offset, path);
-    path = path.shift(new Offset(this.size * 2, 0.0));
-    path = createStarPath(this.size - offset, path);
-
-    if (offset > 0) {
-      path = path.shift(new Offset(offset, offset));
-    }
+    path = createStarPath(this.size - strokeWidth * 2, path);
+    path = path.shift(Offset(this.size, 0.0));
+    path = createStarPath(this.size - strokeWidth * 2, path);
+    path = path.shift(Offset(this.size, 0.0));
+    path = createStarPath(this.size - strokeWidth * 2, path);
+    path = path.shift(Offset(this.size, 0.0));
+    path = createStarPath(this.size - strokeWidth * 2, path);
+    path = path.shift(Offset(this.size, 0.0));
+    path = createStarPath(this.size - strokeWidth * 2, path);
     path.close();
 
     canvas.drawPath(path, paint);
