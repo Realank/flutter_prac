@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
 class _Page {
-  const _Page({this.icon, this.text, this.content});
+  _Page({this.icon, this.text, this.content});
   final IconData icon;
   final String text;
   final Widget content;
 }
 
-const List<_Page> _allPages = const <_Page>[
-  const _Page(icon: Icons.grade, text: 'TRIUMPH', content: Center(child: const Text('first page'))),
-  const _Page(icon: Icons.playlist_add, text: 'NOTE'),
-  const _Page(icon: Icons.check_circle, text: 'SUCCESS'),
-  const _Page(icon: Icons.question_answer, text: 'OVERSTATE'),
-  const _Page(icon: Icons.sentiment_very_satisfied, text: 'SATISFACTION'),
-  const _Page(icon: Icons.camera, text: 'APERTURE'),
+List<_Page> _allPages = <_Page>[
+  _Page(
+      icon: Icons.grade,
+      text: 'TRIUMPH',
+      content: Container(color: Colors.black12, child: Center(child: Text('first page')))),
+  _Page(icon: Icons.playlist_add, text: 'NOTE'),
+  _Page(icon: Icons.check_circle, text: 'SUCCESS'),
+  _Page(icon: Icons.question_answer, text: 'OVERSTATE'),
+  _Page(icon: Icons.sentiment_very_satisfied, text: 'SATISFACTION'),
+  _Page(icon: Icons.camera, text: 'APERTURE'),
 ];
 
 class ScrollTabPage extends StatelessWidget {
@@ -81,19 +84,36 @@ class ScrollTabState extends State<ScrollTabWidget> with SingleTickerProviderSta
           }).toList(),
         ),
       ),
-      body: new TabBarView(
-          controller: _controller,
-          children: _allPages.map((_Page page) {
-            return new SafeArea(
+      body: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 40.0,
+//            width: 50.0,
+            child: Center(
+              child: TabPageSelector(
+                indicatorSize: 8.0,
+                controller: _controller,
+                selectedColor: Colors.black,
+              ),
+            ),
+          ),
+          Expanded(
+            child: new TabBarView(
+                controller: _controller,
+                children: _allPages.map((_Page page) {
+                  return new SafeArea(
 //              top: true,
 //              bottom: true,
-              child: new Container(
-                key: new ObjectKey(page.icon),
-                padding: const EdgeInsets.all(12.0),
-                child: page.content != null ? page.content : new Text(page.text),
-              ),
-            );
-          }).toList()),
+                    child: new Container(
+                      key: new ObjectKey(page.icon),
+                      padding: const EdgeInsets.all(12.0),
+                      child: page.content != null ? page.content : new Text(page.text),
+                    ),
+                  );
+                }).toList()),
+          ),
+        ],
+      ),
       bottomNavigationBar: new Container(
         color: Theme.of(context).primaryColor,
         child: SafeArea(
