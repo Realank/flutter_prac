@@ -19,13 +19,14 @@ import 'AppleStylePage.dart';
 import 'ScrollTabPage.dart';
 import 'AppleScrollPage.dart';
 import 'DrawerPage.dart';
+import 'PaintPage.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(home: new _Features(), theme: customTheme);
+    return MaterialApp(home: _Features(), theme: customTheme);
   }
 }
 
@@ -50,18 +51,19 @@ class _Features extends StatelessWidget {
     '苹果导航/列表': Icons.navigate_before,
     '滚动TabBar': Icons.inbox,
     '侧滑抽屉': Icons.keyboard_tab,
+    '绘图': Icons.format_paint,
   };
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('功能列表'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('功能列表'),
       ),
-      body: new ListView(
+      body: ListView(
           children: listDict.keys.map((String name) {
-        return new ListTile(
-            leading: new Icon(listDict[name]),
-            title: new Text(name),
+        return ListTile(
+            leading: Icon(listDict[name]),
+            title: Text(name),
             onTap: () {
               goNext(name, context);
             });
@@ -72,68 +74,70 @@ class _Features extends StatelessWidget {
   void goNext(page, BuildContext context) {
     switch (page) {
       case '文本':
-        jumpPage(new TextPage(), context);
+        jumpPage(TextPage(), context);
         break;
       case '图片':
-        jumpPage(new ImagePage(), context);
+        jumpPage(ImagePage(), context);
         break;
       case '布局':
-        jumpPage(new LayoutPage(), context);
+        jumpPage(LayoutPage(), context);
         break;
       case '网格':
-        jumpPage(new GridViewPage(), context);
+        jumpPage(GridViewPage(), context);
         break;
       case '列表':
-        jumpPage(new ListPage(), context);
+        jumpPage(ListPage(), context);
         break;
       case 'Stack':
-        jumpPage(new StackPage(), context);
+        jumpPage(StackPage(), context);
         break;
       case '卡片':
-        jumpPage(new CardPage(), context);
+        jumpPage(CardPage(), context);
         break;
       case '状态管理':
-        jumpPage(new StateManage(), context);
+        jumpPage(StateManage(), context);
         break;
       case '输入&按钮':
-        jumpPage(new InputPage(), context);
+        jumpPage(InputPage(), context);
         break;
       case '手势':
-        jumpPage(new GesturePage(), context);
+        jumpPage(GesturePage(), context);
         break;
       case '动画':
-        jumpPage(new AnimationPage(), context);
+        jumpPage(AnimationPage(), context);
         break;
       case '文件读取':
-        jumpPage(new FileIOPage(), context);
+        jumpPage(FileIOPage(), context);
         break;
       case '网络':
-        jumpPage(new NetworkPage(), context);
+        jumpPage(NetworkPage(), context);
         break;
       case '第三方动画':
-        jumpPage(new FlipNumberPage(), context);
+        jumpPage(FlipNumberPage(), context);
         break;
       case '定时器':
-        jumpPage(new TimerPage(), context);
+        jumpPage(TimerPage(), context);
         break;
       case '苹果风格':
-        jumpPage(new AppleStylePage(), context);
+        jumpPage(AppleStylePage(), context);
         break;
       case '苹果导航/列表':
-        jumpPage(new AppleScrollPage(), context);
+        jumpPage(AppleScrollPage(), context);
         break;
       case '滚动TabBar':
-        jumpPage(new ScrollTabPage(), context);
+        jumpPage(ScrollTabPage(), context);
         break;
       case '侧滑抽屉':
-        jumpPage(new DrawerPage(), context);
+        jumpPage(DrawerPage(), context);
         break;
+      case '绘图':
+        jumpPage(PaintPage(), context);
     }
   }
 
   void jumpPage(StatelessWidget widget, BuildContext context) {
     Navigator.of(context).push(
-          new MaterialPageRoute(builder: (context) => widget),
+          MaterialPageRoute(builder: (context) => widget),
         );
   }
 }

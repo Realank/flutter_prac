@@ -38,10 +38,13 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget imageSection = new Image.asset(
-      'images/dubai.jpg',
-      height: 240.0,
-      fit: BoxFit.cover,
+    Widget imageSection = ClipRRect(
+      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+      child: new Image.asset(
+        'images/dubai.jpg',
+        height: 240.0,
+        fit: BoxFit.cover,
+      ),
     );
     Widget titleSection = new Container(
 //      color: Colors.grey,
