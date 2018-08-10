@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 Widget createMovieTile(String title, String subTitle) {
   return new Container(
@@ -16,6 +17,12 @@ Widget createMovieTile(String title, String subTitle) {
 
 List<Widget> createList() {
   return <Widget>[
+    createMovieTile('CineArts at the Empire', '85 W Portal Ave'),
+    createMovieTile('The Castro Theater', '429 Castro St'),
+    createMovieTile('CineArts at the Empire', '85 W Portal Ave'),
+    createMovieTile('The Castro Theater', '429 Castro St'),
+    createMovieTile('CineArts at the Empire', '85 W Portal Ave'),
+    createMovieTile('The Castro Theater', '429 Castro St'),
     createMovieTile('CineArts at the Empire', '85 W Portal Ave'),
     createMovieTile('The Castro Theater', '429 Castro St'),
   ];
@@ -123,6 +130,12 @@ class PaletteTabView extends StatelessWidget {
 }
 
 class ListPage extends StatelessWidget {
+  Future<Null> _handleRefresh() async {
+    await new Future.delayed(new Duration(seconds: 3));
+
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -135,8 +148,12 @@ class ListPage extends StatelessWidget {
               Expanded(
                 child: new Container(
                   color: Colors.grey,
-                  child: new ListView(
-                    children: createList(),
+                  child: RefreshIndicator(
+                    onRefresh: _handleRefresh,
+                    child: new ListView(
+//                      physics: const AlwaysScrollableScrollPhysics(),
+                      children: createList(),
+                    ),
                   ),
                 ),
               ),
