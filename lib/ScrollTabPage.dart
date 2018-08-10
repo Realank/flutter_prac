@@ -117,38 +117,38 @@ class ScrollTabState extends State<ScrollTabWidget> with SingleTickerProviderSta
           ),
         ],
       ),
-//      bottomNavigationBar: new Container(
-//        color: Theme.of(context).primaryColor,
-//        child: SafeArea(
-//          child: new TabBar(
-//            controller: _controller,
-//            isScrollable: true,
-//            indicator: getIndicator2(),
-//            tabs: _allPages.map((_Page page) {
-//              return new Tab(text: page.text, icon: new Icon(page.icon));
-//            }).toList(),
-//          ),
-//        ),
-//      ),
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-            canvasColor: Colors.green,
-            primaryColor: Colors.red,
-            textTheme:
-                Theme.of(context).textTheme.copyWith(caption: TextStyle(color: Colors.orange))),
-        child: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.local_airport), title: Text('airport')),
-            BottomNavigationBarItem(icon: Icon(Icons.local_airport), title: Text('airport2'))
-          ],
-          onTap: (index) {
-            setState(() {
-              _controller.index = index;
-            });
-          },
-          currentIndex: _controller.index,
+      bottomNavigationBar: new Container(
+        color: Theme.of(context).primaryColor,
+        child: SafeArea(
+          child: new TabBar(
+            controller: _controller,
+            isScrollable: true,
+            indicator: getIndicator2(),
+            tabs: _allPages.map((_Page page) {
+              return new Tab(text: page.text, icon: new Icon(page.icon));
+            }).toList(),
+          ),
         ),
       ),
+//      bottomNavigationBar: Theme(
+//        data: Theme.of(context).copyWith(
+//            canvasColor: Colors.green,
+//            primaryColor: Colors.red,
+//            textTheme:
+//                Theme.of(context).textTheme.copyWith(caption: TextStyle(color: Colors.orange))),
+//        child: BottomNavigationBar(
+//          items: [
+//            BottomNavigationBarItem(icon: Icon(Icons.local_airport), title: Text('airport')),
+//            BottomNavigationBarItem(icon: Icon(Icons.local_airport), title: Text('airport2'))
+//          ],
+//          onTap: (index) {
+//            setState(() {
+//              _controller.index = index;
+//            });
+//          },
+//          currentIndex: _controller.index,
+//        ),
+//      ),
     );
   }
 }

@@ -5,7 +5,7 @@ class TextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('TextPage'),
+          title: new Text('文本'),
         ),
         body: new Column(children: <Widget>[
           new Text('Text Page'),

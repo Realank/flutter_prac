@@ -144,6 +144,7 @@ class _TextFieldExampleState extends State<TextFieldExample> {
           child: new TextField(
             controller: _controller,
             maxLength: 30,
+            keyboardType: TextInputType.numberWithOptions(decimal: true),
             decoration: new InputDecoration(
               hintText: 'Type something',
             ),

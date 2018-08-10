@@ -70,7 +70,7 @@ class RightButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return new CupertinoButton(
       padding: EdgeInsets.zero,
-      child: const Text('Exit'),
+      child: const Text('退出'),
       onPressed: () {
         // The demo is on the root navigator.
         Navigator.of(context, rootNavigator: true).pop();
