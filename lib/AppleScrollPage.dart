@@ -18,7 +18,7 @@ class AppleScrollPage extends StatelessWidget {
             const CupertinoSliverNavigationBar(
               largeTitle: const Text('苹果导航/列表'),
             ),
-            new CupertinoRefreshControl(
+            CupertinoSliverRefreshControl(
               onRefresh: () {
                 print('refresh');
                 return new Future<void>.delayed(const Duration(seconds: 2));

@@ -33,9 +33,9 @@ class _NetworkWidgetState extends State<NetworkWidget> {
     try {
       var request = await httpClient.getUrl(Uri.parse(url));
       var response = await request.close();
-      if (response.statusCode == HttpStatus.OK) {
-        var json = await response.transform(UTF8.decoder).join();
-        var data = JSON.decode(json);
+      if (response.statusCode == HttpStatus.ok) {
+        var jsonStr = await response.transform(utf8.decoder).join();
+        var data = json.decode(jsonStr);
         result = data['origin'];
       } else {
         result = 'Error getting IP address:\nHttp status ${response.statusCode}';
