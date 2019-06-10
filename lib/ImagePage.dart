@@ -17,9 +17,14 @@ class ImagePage extends StatelessWidget {
                 Colors.grey),
             _sizedContainer(
                 new CachedNetworkImage(
-                  placeholder: new CircularProgressIndicator(),
+                  placeholder: (BuildContext context, String url) {
+                    return CircularProgressIndicator();
+                  },
                   imageUrl: 'https://www.baidu.com/img/bd_logo1.png',
-                  errorWidget: new Icon(Icons.error),
+                  errorWidget:
+                      (BuildContext context, String url, Object error) {
+                    return Icon(Icons.error);
+                  },
                 ),
                 Colors.green),
             new Image.asset(
